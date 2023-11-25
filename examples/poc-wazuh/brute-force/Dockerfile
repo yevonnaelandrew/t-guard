@@ -7,7 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install SSH server
 RUN apt-get update && \
     apt-get install -y openssh-server && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y iputils-ping && \
+    apt-get install -y sudo nano systemctl
 
 # Configure SSH
 RUN mkdir /var/run/sshd
