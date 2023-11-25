@@ -1,9 +1,0 @@
-[submodule "iris-web"]
-	path = iris-web
-	url = https://github.com/dfir-iris/iris-web
-[submodule "wazuh"]
-	path = wazuh
-	url = https://github.com/wazuh/wazuh-docker.git
-[submodule "shuffle"]
-	path = shuffle
-	url = https://github.com/Shuffle/Shuffle
