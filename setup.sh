@@ -42,6 +42,7 @@ while true; do
         cd iris-web
         sudo docker compose build
         sudo docker compose up -d
+        ;;
     6)
         cd examples/poc-wazuh/brute-force
         sudo docker compose build
