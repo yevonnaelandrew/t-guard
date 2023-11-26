@@ -39,7 +39,6 @@ while true; do
         ;;
     5)
         cd iris-web
-        cp .env.bak .env
         sudo docker compose build
         sudo docker compose up -d
         ;;
