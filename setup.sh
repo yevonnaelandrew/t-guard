@@ -7,6 +7,7 @@ while true; do
                     "3" "Install Wazuh (SIEM)" \
                     "4" "Install Shuffle (SOAR)" \
                     "5" "Install DFIR-IRIS (Incident Response Platform)" \
+                    "6" "Setup Simulation and POC" \
                     "10" "Show Status" 3>&1 1>&2 2>&3)
     # Script version 1.0 updated 15 November 2023
     # Depending on the chosen option, execute the corresponding command
@@ -39,6 +40,10 @@ while true; do
         ;;
     5)
         cd iris-web
+        sudo docker compose build
+        sudo docker compose up -d
+    6)
+        cd examples/poc-wazuh/brute-force
         sudo docker compose build
         sudo docker compose up -d
         ;;

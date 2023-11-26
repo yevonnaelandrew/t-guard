@@ -8,7 +8,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y openssh-server && \
     apt-get install -y iputils-ping && \
-    apt-get install -y sudo nano systemctl
+    apt-get install -y sudo nano systemctl wget curl && \
+    apt-get install rsyslog && \
+    service rsyslog start
 
 # Configure SSH
 RUN mkdir /var/run/sshd
