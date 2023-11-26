@@ -15,7 +15,7 @@ while true; do
     1)
         sudo apt-get update -y
         sudo apt-get upgrade -y
-        sudo apt-get install wget curl nano git -y
+        sudo apt-get install wget curl nano git unzip -y
         ;;
     2)
         # Check if Docker is installed
@@ -44,6 +44,9 @@ while true; do
         sudo docker compose up -d
         ;;
     6)
+        wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
+        && unzip SecList.zip \
+        && rm -f SecList.zip
         cd examples/poc-wazuh/brute-force
         sudo docker compose build
         sudo docker compose up -d
